@@ -1,0 +1,8 @@
+<h3>All questions</h3>
+<ul>
+  {{#each model.questions as |question|}}
+  {{question-tile question=question}}
+  {{/each}}
+</ul>
+
+{{new-question saveQuestion="saveQuestion" question=model}}

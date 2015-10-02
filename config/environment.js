@@ -2,8 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'question-answer-message-board',
+    modulePrefix: 'question-answer-blog',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://question-answer-blog.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
