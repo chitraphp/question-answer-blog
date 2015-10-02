@@ -1,3 +1,8 @@
-<li>{{#link-to 'question' question.id}}{{question.questionAttr}}{{/link-to}}{{question.author}}</li>
-{{update-question question=question updateQuestion="updateQuestion"}}
+<li>{{#link-to 'question' question.id}}{{question.questionAttr}}{{/link-to}}{{question.author}}{{update-question question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
+
 <button {{action 'destroyQuestion' model}}>Delete</button>
+</li>
+
+<!-- {{update-question question=question updateQuestion="updateQuestion"}}
+
+<button {{action 'destroyQuestion' model}}>Delete</button> -->

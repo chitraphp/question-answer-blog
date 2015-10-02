@@ -1,1 +1,17 @@
-{{outlet}}
+<ul>
+  <li>{{model.author}}</li>
+  <li>{{model.questionAttr}}</li>
+  <li>{{model.notes}}</li>
+</ul>
+{{#if model.answers}}
+<h3>Answers for this question</h3>
+<ul>
+  {{#each model.answers as |answer|}}
+  <li>{{answer.name}}</li>
+  <li>{{answer.answerAttr}}</li>
+  {{/each}}
+</ul>
+{{else}}
+<h3>no answers</h3>
+{{/if}}
+{{new-answer saveAnswer="saveAnswer" question=model}}
