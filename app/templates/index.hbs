@@ -1,7 +1,7 @@
 <h3>All questions</h3>
 <ul>
   {{#each model.questions as |question|}}
-  {{question-tile question=question}}
+  {{question-tile question=question destroyQuestion="destroyQuestion"}}
   {{/each}}
 </ul>
 
