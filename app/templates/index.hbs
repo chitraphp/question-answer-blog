@@ -1,8 +1,10 @@
-<h3>All questions</h3>
+
+<section class="all-questions">
 <ul>
   {{#each model.questions as |question|}}
-  {{question-tile question=question destroyQuestion="destroyQuestion"}}
+  {{question-tile question=question destroyQuestion="destroyQuestion" }}
   {{/each}}
 </ul>
+</section>
 
-{{new-question saveQuestion="saveQuestion" question=model}}
+<section>{{new-question saveQuestion="saveQuestion" }}</section>

@@ -1,0 +1,39 @@
+nav {
+  background-color: blue;
+}
+body {
+  width:90%;
+  display: block;
+  border: pink;
+}
+.navbar-header,.question,.answer {
+  color: blue;
+}
+header {
+  background-color:pink;
+    color:blue;
+    text-align:center;
+    padding:5px;
+}
+footer {
+    background-color:pink;
+    color:blue;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+section.all-questions {
+    width:60%;
+    float:left;
+    padding:10px;
+}
+
+section.question-form {
+    width:30%;
+    float:right;
+    padding:10px;
+}
+button {
+  float:right;
+
+}
