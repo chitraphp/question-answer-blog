@@ -12,7 +12,8 @@ export default Ember.Component.extend({
         name: this.get('name'),
         answerAttr: this.get('answerAttr'),
         question: this.get('question'),
-        vote:0
+        vote:0,
+        date_added: Date.now()
 
       };
       this.set('addNewAnswerForm', false);

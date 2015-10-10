@@ -1,18 +1,28 @@
+<div class="well">
 <ul class="question">
   <!-- <li>{{model.author}}</li> -->
   <li>{{model.questionAttr}}</li>
   <li>{{model.notes}}</li>
-</ul>
+
 {{update-question question=model updateQuestion="updateQuestion"}}
+</ul>
+</div>
+<div class="well">
 {{#if model.answers}}
 <h3>Answers for this question</h3>
+
 <ul class="answer">
   {{#each sortedModel as |answer|}}
   <li>{{answer.name}}<span id="vote">{{answer.vote}}</span><button type="button" class="btn btn-default btn-sm" {{action 'voteUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button><button type="button" class="btn btn-default btn-sm" {{action 'voteDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button></li>
-  <li>{{answer.answerAttr}}</li>
+  <li>{{answer.answerAttr}}<span>{{format-date answer.date_added}}</span></li>
+  <hr>
   {{/each}}
 </ul>
+
 {{else}}
 <h3>no answers</h3>
 {{/if}}
-{{new-answer saveAnswer="saveAnswer" question=model}}
+</div>
+<div class="well">
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+</div>
