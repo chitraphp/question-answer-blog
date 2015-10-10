@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         name: this.get('name'),
         answerAttr: this.get('answerAttr'),
         question: this.get('question'),
+        vote:0
 
       };
       this.set('addNewAnswerForm', false);

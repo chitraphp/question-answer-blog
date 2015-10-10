@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         question.get('answers').addObject(newAnswer);
         question.save();
-        this.transitionTo('question', params.question);
+        this.transitionTo('question', params.question,{queryParams: {sort: 'vote',direction:'desc'}});
       }).catch(function(thingy) {
         console.log(thingy.errors);
       });
@@ -27,6 +27,22 @@ export default Ember.Route.extend({
         question.save();
         this.transitionTo('index');
       },
+
+      voteUp(answer) {
+        //debugger;
+        var num = answer.get('vote') + 1;
+        answer.set('vote',num);
+        answer.save();
+        this.transitionTo('question', answer.get('question'));
+      },
+
+      voteDown(answer) {
+        //debugger;
+        var num = answer.get('vote') - 1;
+        answer.set('vote',num);
+        answer.save();
+        this.transitionTo('question', answer.get('question'));
+      }
 
   }
 });

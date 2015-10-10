@@ -1,7 +1,7 @@
 
 <section class="all-questions">
 <ul>
-  {{#each model.questions as |question|}}
+  {{#each sortedModel as |question|}}
   {{question-tile question=question destroyQuestion="destroyQuestion" }}
   {{/each}}
 </ul>
