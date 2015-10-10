@@ -1,8 +1,8 @@
 <div class="well">
 <ul class="question">
   <!-- <li>{{model.author}}</li> -->
-  <li>{{model.questionAttr}}</li>
-  <li>{{model.notes}}</li>
+  <li>Question:{{model.questionAttr}}</li>
+  <li>Notes:{{model.notes}}</li>
 
 {{update-question question=model updateQuestion="updateQuestion"}}
 </ul>
@@ -13,8 +13,8 @@
 
 <ul class="answer">
   {{#each sortedModel as |answer|}}
-  <li>{{answer.name}}<span id="vote">{{answer.vote}}</span><button type="button" class="btn btn-default btn-sm" {{action 'voteUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button><button type="button" class="btn btn-default btn-sm" {{action 'voteDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button></li>
-  <li>{{answer.answerAttr}}<span>{{format-date answer.date_added}}</span></li>
+  <li>answer By:{{answer.name}}<span id="vote">{{answer.vote}}</span><button type="button" class="btn btn-default btn-sm" {{action 'voteUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button><button type="button" class="btn btn-default btn-sm" {{action 'voteDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button></li>
+  <li>answer:{{answer.answerAttr}}<span>{{format-date answer.date_added}}</span></li>
   <hr>
   {{/each}}
 </ul>

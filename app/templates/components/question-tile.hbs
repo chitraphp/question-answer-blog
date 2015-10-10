@@ -1,7 +1,7 @@
-<li>{{#link-to 'question' question.id}}{{question.questionAttr}}{{/link-to}}
+<li>Question:{{#link-to 'question' question.id}}{{question.questionAttr}}{{/link-to}}
   <button {{action 'destroyQuestion' question}}>Delete</button>
   <ul>
-    <li>{{question.author}}</li>
+    <li>Author:{{question.author}}</li>
   </ul>
 
 
