@@ -13,7 +13,7 @@
 
 <ul class="answer">
   {{#each sortedModel as |answer|}}
-  <li>answer By:{{answer.name}}<span id="vote">{{answer.vote}}</span><button type="button" class="btn btn-default btn-sm" {{action 'voteUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button><button type="button" class="btn btn-default btn-sm" {{action 'voteDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button></li>
+  <li>answer By:{{answer.name}}<span id="vote">Likes:{{answer.vote}}</span><button type="button" class="btn btn-default btn-sm" {{action 'voteUp' answer}}><span class="glyphicon glyphicon-thumbs-up"></span></button><button type="button" class="btn btn-default btn-sm" {{action 'voteDown' answer}}><span class="glyphicon glyphicon-thumbs-down"></span></button></li>
   <li>answer:{{answer.answerAttr}}<span>{{format-date answer.date_added}}</span></li>
   <hr>
   {{/each}}
